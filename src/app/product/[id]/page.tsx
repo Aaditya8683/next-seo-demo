@@ -5,8 +5,6 @@ export const dynamic = 'force-dynamic'; // ✅ Add this line to enable SSR
 import { getProduct } from '@/lib/products';
 import ShareButtons from '@/components/ShareButtons';
 import { Metadata } from 'next';
-import HelmetProviderWrapper from '@/components/HelmetProviderWrapper';
-
 export async function generateMetadata({
   params,
 }: {
@@ -48,7 +46,6 @@ export default async function ProductPage({
   const product = await getProduct(params.id);
 
   return (
-    <HelmetProviderWrapper>
       <div className="container mx-auto px-4 py-8">
         <div className="grid md:grid-cols-2 gap-8">
           <div className="bg-white p-6 rounded-lg shadow-md">
@@ -78,6 +75,5 @@ export default async function ProductPage({
           </div>
         </div>
       </div>
-    </HelmetProviderWrapper>
   );
 }
