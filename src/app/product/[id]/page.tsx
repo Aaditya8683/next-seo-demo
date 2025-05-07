@@ -16,7 +16,7 @@ export async function generateMetadata({
     openGraph: {
       title: product.title,
       description: product.description,
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/product/${product.id}`,
+      url: `${'https://next-seo-demo-project.vercel.app'}/product/${product.id}`,
       images: [
         {
           url: product.image,

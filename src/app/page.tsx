@@ -34,7 +34,7 @@ export default async function Home() {
               <p className="text-lg font-bold mb-4">${product.price}</p>
 
               <ClientShareButtons
-                url={`${process.env.NEXT_PUBLIC_BASE_URL}/product/${product.id}`}
+                url={`${'https://next-seo-demo-project.vercel.app'}/product/${product.id}`}
                 title={product.title}
                 description={`${product.description} Only $${product.price}`}
               />
