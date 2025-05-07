@@ -1,5 +1,4 @@
-// src/app/page.tsx
-import ShareButtons from "@/components/ShareButtons";
+import ClientShareButtons from "@/components/ClientShareButtons";
 import { getProducts } from "@/lib/products";
 import Link from "next/link";
 
@@ -34,7 +33,7 @@ export default async function Home() {
               </p>
               <p className="text-lg font-bold mb-4">${product.price}</p>
 
-              <ShareButtons
+              <ClientShareButtons
                 url={`${process.env.NEXT_PUBLIC_BASE_URL}/product/${product.id}`}
                 title={product.title}
                 description={`${product.description} Only $${product.price}`}
