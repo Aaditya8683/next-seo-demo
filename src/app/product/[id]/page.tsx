@@ -1,4 +1,7 @@
 // src/app/product/[id]/page.tsx
+
+export const dynamic = 'force-dynamic'; // ✅ Add this line to enable SSR
+
 import { getProduct } from '@/lib/products';
 import ShareButtons from '@/components/ShareButtons';
 import { Metadata } from 'next';
