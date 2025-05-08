@@ -1,4 +1,7 @@
 // src/app/page.tsx
+
+export const dynamic = 'force-dynamic'; // 👈 Makes this page dynamic to allow no-store fetch
+
 import Link from "next/link";
 import { getProducts } from "@/lib/products";
 import ClientShareButtons from "@/components/ClientShareButtons";

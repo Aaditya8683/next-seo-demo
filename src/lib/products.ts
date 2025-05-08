@@ -1,7 +1,10 @@
 // src/lib/products.ts
+
 export async function getProducts() {
   try {
-    const res = await fetch('https://fakestoreapi.com/products');
+    const res = await fetch('https://fakestoreapi.com/products', {
+      cache: 'no-store',
+    });
     if (!res.ok) throw new Error('Failed to fetch products');
     return await res.json();
   } catch (error) {
@@ -12,7 +15,9 @@ export async function getProducts() {
 
 export async function getProduct(id: string) {
   try {
-    const res = await fetch(`https://fakestoreapi.com/products/${id}`);
+    const res = await fetch(`https://fakestoreapi.com/products/${id}`, {
+      cache: 'no-store',
+    });
     if (!res.ok) throw new Error('Failed to fetch product');
     return await res.json();
   } catch (error) {
@@ -24,7 +29,7 @@ export async function getProduct(id: string) {
       price: 0,
       description: 'No description available.',
       category: 'unknown',
-      image: '/fallback-image.jpg', // Optional: add a default image to public folder
+      image: '/fallback-image.jpg', // Optional: place this image in the /public folder
       rating: {
         rate: 0,
         count: 0,
