@@ -21,7 +21,7 @@ export async function generateMetadata({
       url: `https://next-seo-demo-project.vercel.app/product/${product.id}`,
       images: [
         {
-          url: product.image,
+          url: `https://next-seo-demo-project.vercel.app/product-${product.id}.jpg`,
           width: 800,
           height: 600,
           alt: product.title,
@@ -33,7 +33,7 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title: product.title,
       description: product.description,
-      images: [product.image],
+      images: [`https://next-seo-demo-project.vercel.app/product-${product.id}.jpg`],
     },
   };
 }
