@@ -13,7 +13,7 @@ export async function generateMetadata({
   const product = await getProduct(params.id);
   const imageUrl =
     product.id === 16
-      ? "https://next-seo-demo-project.vercel.app/product-20.jpg"
+      ? "https://next-seo-demo-project.vercel.app/product-16.jpg"
       : product.image;
 
   return {
