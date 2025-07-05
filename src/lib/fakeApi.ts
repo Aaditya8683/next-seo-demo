@@ -9,13 +9,13 @@ export interface SocialShareData {
 export const getShareData = async (id: string): Promise<SocialShareData> => {
   // Simulate API delay
   await new Promise(resolve => setTimeout(resolve, 500));
-  
+
   return {
     id,
     title: `Amazing Content ${id}`,
     description: `This is a demo of how to share content ${id} on social media with proper previews.`,
     imageUrl: `https://picsum.photos/seed/${id}/1200/630`,
-    url: `${process.env.NEXT_PUBLIC_BASE_URL || 'https://next-seo-demo-eight.vercel.app/product'}/share/${id}`
+    url: `${'https://next-seo-demo-eight.vercel.app/product'}/share/${id}`
   };
 };
 
