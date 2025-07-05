@@ -13,7 +13,7 @@ export async function generateMetadata({
   const product = await getProduct(params.id);
   const imageUrl =
     product.id === 16
-      ? "https://next-seo-demo-project.vercel.app/product-16.jpg"
+      ? "https://next-seo-demo-eight.vercel.app/product/product-16.jpg"
       : product.image;
 
   return {
@@ -22,7 +22,7 @@ export async function generateMetadata({
     openGraph: {
       title: product.title,
       description: product.description,
-      url: `https://next-seo-demo-project.vercel.app/product/${product.id}`,
+      url: `https://next-seo-demo-eight.vercel.app/product/${product.id}`,
       images: [
         {
           url: product.image, // ✅ direct CDN image
@@ -74,7 +74,7 @@ export default async function ProductPage({
           </p>
 
           <ShareButtons
-            url={`https://next-seo-demo-project.vercel.app/product/${product.id}`}
+            url={`https://next-seo-demo-eight.vercel.app/product/${product.id}`}
             title={product.title}
             description={`${product.description} Get it now for only $${product.price}`}
           />
